@@ -1,8 +1,8 @@
 # Employee Manager Application (Frontend + Backend)
 
-Esse repositório baseia-se em https://github.com/rodrigoclira/employee-manager-app-v1 . Na versão v2 do repositório foi adicionado uma aplicação de frontend para acessar a API disponibilizada com DRF. Sendo assim, duas aplicações são inicializadas em _containers_ docker.
+Esse repositório baseia-se em https://github.com/rodrigoclira/employee-manager-app-v1 . Na versão v2 do repositório foi adicionado uma aplicação de frontend para acessar a API disponibilizada com DRF. Sendo assim duas aplicações são inicializadas por _containers_ docker, a _frontend_ e a _backend_.
 
-Ambas aplicações são levantadas usando o comando abaixo
+Ambas aplicações podem ser inicializadas usando o comando abaixo
 ```
 sudo docker-compose up --build
 ```
@@ -11,9 +11,10 @@ sudo docker-compose up --build
 ![image](https://user-images.githubusercontent.com/276077/174942615-b4e7e945-2d89-4c23-836e-9ab8931b5ed3.png)
 
 
-A aplicação de frontend fica disponível na porta 8000
+A aplicação de _frontend_ fica disponível na porta 8000
 
 ![image](https://user-images.githubusercontent.com/276077/174942679-b3aa5eaa-ab51-4c51-aa21-36f55fb13a49.png)
+
 
 
 Ela se comunica com a aplicação de backend que está disponível na porta 8001
@@ -21,11 +22,17 @@ Ela se comunica com a aplicação de backend que está disponível na porta 8001
 ![image](https://user-images.githubusercontent.com/276077/174942952-37e7e1f6-75b8-4db0-ba93-87933617a63e.png)
 
 
-No frontend apenas o endpoint GET /employee e o GET /employee/ID estão sendo utilizados. Como é exibido na views.py da aplicação de frontend
+Na aplicação de _frontend_ apenas o endpoint GET /employee e o GET /employee/ID da API estão sendo utilizados. 
+Todas as views que utilizam esses endpoints estão implementadas no arquivo _views.py_ do app _web_, como exibido na imagem abaixo.
 
 ![image](https://user-images.githubusercontent.com/276077/174943242-8d6cd8ff-691f-45bb-846e-0e029004bc00.png)
 
-para finalizar a aplicação, utilize o 
+Navegue na aplicação disponível na porta 8000 (_frontend_) e avalie o código dela. 
+
+![image](https://user-images.githubusercontent.com/276077/175022904-fbe4d379-0fc8-4ce0-8e5e-9d55171e1921.png)
+
+
+Para finalizar as aplicações inicializadas com o _docker-compose_, utilize o comando abaixo:
 
 ```
 sudo docker-compose down
