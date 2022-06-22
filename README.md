@@ -10,9 +10,11 @@ sudo docker-compose up --build
 
 ![image](https://user-images.githubusercontent.com/276077/174942615-b4e7e945-2d89-4c23-836e-9ab8931b5ed3.png)
 
+
 A aplicação de frontend fica disponível na porta 8000
 
 ![image](https://user-images.githubusercontent.com/276077/174942679-b3aa5eaa-ab51-4c51-aa21-36f55fb13a49.png)
+
 
 Ela se comunica com a aplicação de backend que está disponível na porta 8001
 
@@ -20,6 +22,7 @@ Ela se comunica com a aplicação de backend que está disponível na porta 8001
 
 
 No frontend apenas o endpoint GET /employee e o GET /employee/ID estão sendo utilizados. Como é exibido na views.py da aplicação de frontend
+
 ![image](https://user-images.githubusercontent.com/276077/174943242-8d6cd8ff-691f-45bb-846e-0e029004bc00.png)
 
 
