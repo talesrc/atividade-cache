@@ -79,6 +79,13 @@ Para copiar o badge, você precisa ir na aba "Action" e seguir o caminho descrit
 
 Por fim, salve o código do badge no README. Pronto!
 
+> Pontuação Extra (+1 ponto)
+> 
+> Adicione todas as funcionalidades da API na aplicação de frontend (DELETE, PUT, POST)
+
 ## Referência
+
 https://medium.com/@nutanbhogendrasharma/consume-rest-api-in-django-web-application-130c0daa6f70
+
+https://docs.djangoproject.com/en/4.0/topics/cache/
 
