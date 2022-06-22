@@ -33,7 +33,7 @@ Utilize o 'json' obtido da API para ser a informação salva no cache.
 > Para mais informações de como proceder, leia [Configurando o github actions](https://cassiobotaro.dev/do_zero_a_implantacao/integracao/#configurando-o-github-actions)
 
 
-Exemplo de arquivo abaixo. Nele ainda é necessário executar os testes da aplicação. 
+Use como exemplo de arquivo abaixo. Nele ainda é necessário adicionar os comandos para executar os testes da aplicação. 
 
 ```
 # This workflow will install Python dependencies, run tests and lint with a single version of Python
