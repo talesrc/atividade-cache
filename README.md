@@ -33,8 +33,8 @@ sudo docker-compose down
 
 # Atividade
 
-1. Como exibido na imagem do arquivo _views.py_, não há nenhuma estratégia de cache no frontend. 
-Use o memcached (como exibido no exemplo de aula) para adicionar uma estratégia de cache nas funções 'views.usuarios' e 'views.detalhes'. 
+1. Como exibido na imagem do arquivo _views.py_, não há nenhuma estratégia de cache no app frontend. 
+Use o memcached (como exibido no exemplo de aula) para adicionar uma estratégia de cache de baixo nível nas funções 'views.usuarios' e 'views.detalhes'. 
 Utilize o 'json' obtido da API para ser a informação salva no cache. 
 
 2. A aplicação de backend possui uma bateria de testes no arquivo backend/luizalabs/api/tests. Utilize o workflow do github (github action) para executar esse teste toda vez que o repositório seja modificado. Essa abordagem vai facilitar a detecção de códigos com bugs (para ver como executar os testes, acesso o [README](https://github.com/rodrigoclira/employee-manager-app-v1) do repositório original). 
@@ -94,3 +94,4 @@ https://medium.com/@nutanbhogendrasharma/consume-rest-api-in-django-web-applicat
 
 https://docs.djangoproject.com/en/4.0/topics/cache/
 
+https://github.com/rodrigoclira/devweb2/tree/main/caching#exemplo-de-cache-de-baixo-n%C3%ADvel
