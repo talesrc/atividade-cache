@@ -38,6 +38,8 @@ Para finalizar as aplicações inicializadas com o _docker-compose_, utilize o c
 sudo docker-compose down
 ```
 
+ou ```CTRL+C```
+
 # Atividade
 
 1. Como exibido na imagem do arquivo _views.py_, não há nenhuma estratégia de cache no app frontend. 
