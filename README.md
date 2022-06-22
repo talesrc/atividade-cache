@@ -25,6 +25,11 @@ No frontend apenas o endpoint GET /employee e o GET /employee/ID estão sendo ut
 
 ![image](https://user-images.githubusercontent.com/276077/174943242-8d6cd8ff-691f-45bb-846e-0e029004bc00.png)
 
+para finalizar a aplicação, utilize o 
+
+```
+sudo docker-compose down
+```
 
 # Atividade
 
