@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}Página de Usuários{% endblock %}
+
+{% block content %}
+
+    <h1>
+    Exibindo todos os usuários da API
+    </h1>
+    
+    <div class="row">
+    {% for employee in employees %}
+
+        <div class="col-sm-6" id="{{employee.id}}" >
+            <div class="card" id="{{employee.id}}">
+                <div class="card-body" id="{{employee.id}}">
+                    <h5 class="card-title" id="{{employee.id}}"> {{ employee.name }} ({{ employee.department }})</h5>
+                    <!-- <p class="card-text email" id="{{employee.id}}">{{ employee.email }}<</p>  -->
+                    <a href="{% url 'web:detalhes' employee.id  %}" class="btn btn-primary">Detalhes</a>
+                </div>
+        </div>
+    </div>
+
+
+    {% endfor %}
+    </div>
+
+{% endblock %}
