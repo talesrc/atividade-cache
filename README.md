@@ -1,3 +1,4 @@
+[![Run Backend Tests](https://github.com/talesrc/atividade-cache/actions/workflows/main.yml/badge.svg)](https://github.com/talesrc/atividade-cache/actions/workflows/main.yml)
 # Employee Manager Application (Frontend + Backend)
 
 Esse repositório baseia-se em https://github.com/rodrigoclira/employee-manager-app-v1 . Na versão v2 do repositório foi adicionado uma aplicação de frontend para acessar a API disponibilizada com DRF. Sendo assim duas aplicações são inicializadas por _containers_ docker, a _frontend_ e a _backend_.
