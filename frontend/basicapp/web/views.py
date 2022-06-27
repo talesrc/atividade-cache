@@ -1,6 +1,7 @@
 from django.shortcuts import render
 import requests
 from django.conf import settings
+from django.core.cache import cache
 # Create your views here.
 
 def home(request):
@@ -12,12 +13,20 @@ def usuarios(request):
     base_url = settings.API_URL
     path = '/employee/'
     print(f'Getting {base_url+path}')
-    response = requests.get(base_url+path)
-    employee_data = response.json()
-    context = {
-        'employees': employee_data,        
-    }
-    print(context)
+    employee = cache.get('users')
+    if not employee:
+        response = requests.get(base_url+path)
+        employee_data = response.json()
+        print('não utilizando cache')
+        print(employee_data)
+        context = {
+            'employees': employee_data,        
+        }
+        cache.set('users', context, 45)
+        print(context)
+    else:
+        context = employee
+        print('utilizando cache')
     return render(request, 'web/usuarios.html', context)
 
 def detalhes(request, usuario_id):
@@ -25,10 +34,16 @@ def detalhes(request, usuario_id):
     base_url = settings.API_URL
     path = '/employee/' + str(usuario_id)
     print(f'Getting {base_url+path}')
-    response = requests.get(base_url+path)
-    employee_data = response.json()
-    context = {
-        'employee': employee_data,        
-    }
-    print(context)
+    details = cache.get(f'details/{usuario_id}')
+    if not details:
+        print('Não utilizando cache')
+        response = requests.get(base_url+path)
+        employee_data = response.json()
+        context = {
+            'employee': employee_data,        
+        }
+        cache.set(f'details/{usuario_id}', context, 45)
+    else:
+        print('Utilizando cache')
+        context = details
     return render(request, 'web/detalhes.html', context)

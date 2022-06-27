@@ -5,5 +5,6 @@ COPY requirements.txt /app
 COPY . /app/
 RUN pip install -r requirements.txt
 WORKDIR  /app/luizalabs/
+RUN python manage.py migrate
 #mudando a porta para não dar choque com a usada no front
 CMD python manage.py runserver 0.0.0.0:8001 
